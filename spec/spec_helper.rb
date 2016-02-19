@@ -1,6 +1,11 @@
 $: << File.dirname(__FILE__)+'/../lib'
 
-require 'includes.rb'
+require 'rspec'
+require 'watir-webdriver'
+require 'page-object'
+require 'page-object/page_factory'
+require 'faker'
+require 'pages'
 
 browser = Watir::Browser.new :chrome
 browser.window.maximize
