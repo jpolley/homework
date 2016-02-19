@@ -15,13 +15,13 @@ class SignupPage
   button(:submit, class: 'btn btn-submit')
   div(:error_message, class: 'form-error-main')
 
-  def input_user_details(params={})
+  def input_user_details(params = {})
     name_element.when_present
     self.name = params[:name] || Faker::Name.name
     self.email = params[:email] || Faker::Internet.email
-    self.username = params[:username] || Faker::Name.last_name + Faker::Number.hexadecimal(4)
+    self.username = params[:username] || Faker::Name.last_name
     self.account_name = params[:account_name] || Faker::Company.name
-    self.subdomain = params[:subdomain] || Faker::Hipster.word + Faker::App.name
+    self.subdomain = params[:subdomain] || Faker::App.name
     self.password = params[:password] || 'Beanstalk123!'
   end
 end

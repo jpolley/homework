@@ -8,8 +8,9 @@ class AccountCancellationNewPage
   button(:submit_cancellation, value: 'Cancel this account')
 
   def cancel_account
+    password_element.when_present
     self.password = 'Beanstalk123!'
-    self.check_refund_agreement
-    self.submit_cancellation
+    check_refund_agreement
+    submit_cancellation
   end
 end

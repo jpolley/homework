@@ -2,9 +2,9 @@ describe 'Create account' do
   context 'free plan' do
     before(:all) do
       @name = Faker::Name.name
-      @first_name = @name.split(' ').shift
-      @username = Faker::Number.hexadecimal(7)
-      @subdomain = Faker::Hipster.word + Faker::App.name
+      @first_name = @name.split(' ')[0]
+      @username = Faker::Number.hexadecimal(10)
+      @subdomain = Faker::App.name
 
       visit SignupPage do |page|
         page.input_user_details(
@@ -29,7 +29,7 @@ describe 'Create account' do
     end
 
     it 'url is correct' do
-      expect(@browser.url).to eq("https://#{@subdomain}.beanstalkapp.com/?first_visit=true&plan=Free")
+      expect(@browser.url).to eq("https://#{@subdomain.downcase}.beanstalkapp.com/?first_visit=true&plan=Free")
     end
 
     it 'name displayed in profile link' do
@@ -40,7 +40,7 @@ describe 'Create account' do
 
     it 'name displayed in welcome message' do
       on DashboardPage do |page|
-        # expect(page.welcome_message).to eq("Hi #{@first_name}, you’re awesome!")
+        expect(page.welcome_message).to include(@first_name)
       end
     end
   end

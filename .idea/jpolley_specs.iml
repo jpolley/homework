@@ -109,7 +109,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.11.2, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.5.9, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="configatron (v4.5.0, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="data_magic (v0.22, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v1.6.1, RVM: ruby-1.9.3-p551 [global]) [gem]" level="application" />

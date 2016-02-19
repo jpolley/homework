@@ -3,7 +3,6 @@ GEM
   specs:
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
-    configatron (4.5.0)
     data_magic (0.22)
       faker (>= 1.1.2)
       yml_reader (>= 0.6)
@@ -47,7 +46,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  configatron!
   faker!
   page-object!
   rspec!
